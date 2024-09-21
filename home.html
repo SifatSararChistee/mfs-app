@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center mt-4 flex-col items-center">
+      <div class="stats bg-primary text-primary-content">
+        <div class="stat">
+          <div class="stat-title text-fuchsia-50">Account balance</div>
+          <div class="stat-value">$89,400</div>
+          <div class="stat-actions">
+            <button class="btn btn-sm btn-success" id="add-fund-btn">
+              Add funds
+            </button>
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-title text-fuchsia-50">Current balance</div>
+          <div class="stat-value">$89,400</div>
+          <div class="stat-actions">
+            <button class="btn btn-sm bg-red-600" id="Withdrawal-btn">
+              Withdrawal
+            </button>
+            <button class="btn btn-sm" id="Transaction-btn">
+              Transactions
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Amount to Add</span>
+            </label>
+            <input
+              id="amount-input"
+              type="text"
+              placeholder="Add Amount to Account"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Pin Number</span>
+            </label>
+            <input
+              id="amount-pin-input"
+              type="password"
+              placeholder="Enter your Pin Number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control mt-6">
+            <button class="btn btn-primary" id="add-money-btn">
+              Add Money
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
