@@ -16,7 +16,7 @@
       <div class="stats bg-primary text-primary-content">
         <div class="stat">
           <div class="stat-title text-fuchsia-50">Account balance</div>
-          <div class="stat-value">$89,400</div>
+          <div class="stat-value">$<span id="account-balance">89400</span></div>
           <div class="stat-actions">
             <button class="btn btn-sm btn-success" id="add-fund-btn">
               Add funds
@@ -26,7 +26,7 @@
 
         <div class="stat">
           <div class="stat-title text-fuchsia-50">Current balance</div>
-          <div class="stat-value">$89,400</div>
+          <div class="stat-value">$<span id="current-balance">89400</span></div>
           <div class="stat-actions">
             <button class="btn btn-sm bg-red-600" id="Withdrawal-btn">
               Withdrawal
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div id="add-money-form" class="hidden">
         <form class="card-body">
           <div class="form-control">
             <label class="label">
@@ -70,7 +70,42 @@
           </div>
         </form>
       </div>
+      <div id="cash-out-form" class="hidden">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Amount to Withdraw</span>
+            </label>
+            <input
+              id="withdraw-input"
+              type="text"
+              placeholder="Add Amount to Withdraw"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Pin Number</span>
+            </label>
+            <input
+              id="Withdraw-pin-input"
+              type="password"
+              placeholder="Enter your Pin Number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control mt-6">
+            <button class="btn btn-primary" id="Withdraw-btn">Withdraw</button>
+          </div>
+        </form>
+      </div>
+      <div id="transaction-container" class="hidden"></div>
     </main>
-    <script src="./js/home.js"></script>
+    <script src="./js/add-money.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/withdraw.js"></script>
+    <script src="./js/features.js"></script>
   </body>
 </html>
