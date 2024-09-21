@@ -4,7 +4,7 @@ document
     event.preventDefault();
     const phoneNumber = document.getElementById("phone-number").value;
     const pinNumber = document.getElementById("pin-number").value;
-    if (phoneNumber === "12346789" && pinNumber === "1234") {
+    if (phoneNumber === "123456789" && pinNumber === "1234") {
       window.location.href = "./home.html";
     } else {
       alert("Incorrect PhoneNumber Or Pin");
